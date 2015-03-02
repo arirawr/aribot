@@ -21,8 +21,9 @@ class StdOutListener(StreamListener):
             s = status.author.screen_name
             print(s)
             if s != 'wavome':
-                time.sleep(10)
-                api.create_favorite(status.id)
+                if s != 'EDMbeb':
+                    time.sleep(10)
+                    api.create_favorite(status.id)
         return True
  
     def on_error(self, status_code):
