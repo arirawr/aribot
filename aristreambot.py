@@ -26,7 +26,12 @@ class StdOutListener(StreamListener):
                 message = '@' + s + ' You tweeted with my hashtag!'
                 api.update_status(status=message, in_reply_to_status_id=status.id)
             except:
-                print('duplicate tweet error')
+                try:
+                    print('duplicate tweet error')
+                    message = '@' + s + ' You tweeted with my hashtag AGAIN!'
+                    api.update_status(status=message, in_reply_to_status_id=status.id)
+                except:
+                    print('double duplicate tweet error')
         return True
  
     def on_error(self, status_code):
