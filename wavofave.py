@@ -22,8 +22,11 @@ class StdOutListener(StreamListener):
             print(s)
             if s != 'wavome':
                 if s != 'EDMbeb':
-                    time.sleep(10)
-                    api.create_favorite(status.id)
+                    try:
+                        time.sleep(10)
+                        api.create_favorite(status.id)
+                    except:
+                        print('error')
         return True
  
     def on_error(self, status_code):
