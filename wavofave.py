@@ -20,8 +20,9 @@ class StdOutListener(StreamListener):
             print('Tweet text: ' + status.text)
             s = status.author.screen_name
             print(s)
-            time.sleep(10)
-            api.create_favorite(status.id)
+            if s != 'wavome':
+                time.sleep(10)
+                api.create_favorite(status.id)
         return True
  
     def on_error(self, status_code):
