@@ -21,12 +21,6 @@ class StdOutListener(StreamListener):
             s = status.author.screen_name
             print(s)
             api.create_favorite(status.id)
-            try:
-                api.retweet(status.id)
-                message = '@' + s + ' You tweeted with my hashtag!'
-                api.update_status(status=message, in_reply_to_status_id=status.id)
-            except:
-                print('duplicate tweet error')
         return True
  
     def on_error(self, status_code):
@@ -41,4 +35,4 @@ if __name__ == '__main__':
     listener = StdOutListener()
  
     stream = Stream(auth, listener)
-    stream.filter(track=['#aribot', '#botbotbot'])
+    stream.filter(track=['#wavo', '#wavome', '@wavome', 'wavo', 'wavome'])
