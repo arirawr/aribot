@@ -1,12 +1,12 @@
 import tweepy, time
 from tweepy import StreamListener
 from tweepy import Stream
-from keys import wavokeys
+from keys import wavoarkeys
 
-CONSUMER_KEY = wavokeys['consumer_key']
-CONSUMER_SECRET = wavokeys['consumer_secret']
-ACCESS_TOKEN = wavokeys['access_token']
-ACCESS_TOKEN_SECRET = wavokeys['access_token_secret']
+CONSUMER_KEY = wavoarkeys['consumer_key']
+CONSUMER_SECRET = wavoarkeys['consumer_secret']
+ACCESS_TOKEN = wavoarkeys['access_token']
+ACCESS_TOKEN_SECRET = wavoarkeys['access_token_secret']
 auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
 auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 api = tweepy.API(auth)
@@ -15,17 +15,17 @@ class StdOutListener(StreamListener):
     ''' Handles data received from the stream. '''
  
     def on_status(self, status):
-        if 'RT' not in status.text:
+        print('Tweet text: ' + status.text)
+        s = status.author.screen_name
+        print(s)
+        if '#PREMIERE' in status.text:
         # Prints the text of the tweet
-            print('Tweet text: ' + status.text)
-            s = status.author.screen_name
-            print(s)
-            if s not in {'alphasonico', 'wavome'}:
-                try:
-                    time.sleep(10)
-                    api.create_favorite(status.id)
-                except:
-                    print('error')
+            try:
+                time.sleep(10)
+                api.create_favorite(status.id)
+                api.retweet(status.id)
+            except:
+                print('error')
         return True
  
     def on_error(self, status_code):
@@ -40,4 +40,4 @@ if __name__ == '__main__':
     listener = StdOutListener()
  
     stream = Stream(auth, listener)
-    stream.filter(track=['#wavo', '#wavome', '@wavome', 'wavo', 'wavome'])
+    stream.filter(follow=['169138423'])
