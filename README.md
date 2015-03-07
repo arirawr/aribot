@@ -7,7 +7,7 @@ __I'll be making some base use-case templates for you to use...stay tuned!__
 
 To run any of these scripts, you'll need:
 - [python](https://www.python.org/downloads/)
-- tweepy library  `pip install tweepy`
+- [tweepy](https://github.com/tweepy/tweepy) (`pip install tweepy`)
 
 ## templates
 
