@@ -1,6 +1,11 @@
 # aribot
 Simple tweepy scripts for automated Twitter interactivity.
 
+In the spirit of Twitter, share this project!
+
+<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://github.com/arirawr/aribot" data-text="Simple tweepy scripts for automated Twitter interactivity:" data-via="imariari" data-related="imariari" data-hashtags="python,twitter,botbotbot">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
 __I'll be making some base use-case templates for you to use...stay tuned!__
 
 ## requirements
