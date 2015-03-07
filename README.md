@@ -1,7 +1,15 @@
 # aribot
-Simple tweepy bot for automated Twitter interactivity.
+Simple tweepy scripts for automated Twitter interactivity.
 
 __I'll be making some base use-case templates for you to use...stay tuned!__
+
+## requirements
+
+To run any of these scripts, you'll need:
+- [python](https://www.python.org/downloads/)
+- tweepy library  `pip install tweepy`
+
+## templates
 
 ## scripts
 _aribot.py_ tweets every 90 seconds, pulling line-by-line from a text file that is given as an argument.
