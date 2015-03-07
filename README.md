@@ -14,10 +14,13 @@ To run any of these scripts, you'll need:
 
 __samplekeys.py__ is the place for your Twitter keys. If you put your project on Github, remember to .gitignore (see my .gitignore file)
 
-__autotweet.py__ reads lines from a text file and tweets from your bot's account at specified intervals.
+__autotweet.py__ reads lines from a text file and tweets from your bot's account at specified intervals. To run: `python autotweet.py yourtextfile.txt`
 
-## scripts
-_aribot.py_ tweets every 90 seconds, pulling line-by-line from a text file that is given as an argument.
+## examples
+
+#### Add your own scripts by submitting a pull request!
+
+__aribot.py__ (from the _autotweet.py_ template) tweets every 90 seconds, pulling line-by-line from a text file that is given as an argument.
 
 To run: 
 `python aribot.py yourtextfile.txt`
