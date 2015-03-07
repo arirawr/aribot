@@ -1,7 +1,7 @@
 # aribot
 Simple tweepy scripts for automated Twitter interactivity.
 
-In the spirit of Twitter, [follow me](http://twitter.com/imariari)
+In the spirit of Twitter, [follow me](http://twitter.com/imariari)!
 
 __I'll be making some base use-case templates for you to use...stay tuned!__
 
